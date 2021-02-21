@@ -6,7 +6,7 @@
 This app will ask a question and if you tap on the flashcard, it will show the answer. 
 
 ### App Walk-though
-![](https://i.imgur.com/1RWvMKe.gif)
+![](https://i.imgur.com/B8WpSGQ.gif)
 
 ## Required
 - [x] Create New Project in Xcode
