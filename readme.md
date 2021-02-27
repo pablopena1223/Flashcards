@@ -3,10 +3,10 @@
 ## Lab 1
 
 ### App Description
-This app will ask a question and if you tap on the flashcard, it will show the answer. 
+This app will ask a question in the form of a flashcard and three options. Once you tap on the correct answer, all options will disapear and show the other side of the flash card
 
 ### App Walk-though
-![](https://i.imgur.com/B8WpSGQ.gif)
+![](https://i.imgur.com/wdThlw7.gif)
 
 ## Required
 - [x] Create New Project in Xcode
@@ -15,6 +15,6 @@ This app will ask a question and if you tap on the flashcard, it will show the a
 - [x] Build in logic to show the answer side when the card is tapped
 - [x] Push code to GitHub
 ## Optional
-- [ ] Toggle the flashcard between the question side and the answer side
-- [ ] Style the question and answer side of the card to better distinguish between the two sides
-- [ ] Add selectable multiple choice answers beneath the card
+- [x] Toggle the flashcard between the question side and the answer side
+- [x] Style the question and answer side of the card to better distinguish between the two sides
+- [x] Add selectable multiple choice answers beneath the card
