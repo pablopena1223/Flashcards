@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		66479CAA25E18DEE0040C675 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66479CA925E18DEE0040C675 /* AppDelegate.swift */; };
 		66479CAC25E18DEE0040C675 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66479CAB25E18DEE0040C675 /* SceneDelegate.swift */; };
-		66479CAE25E18DEE0040C675 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66479CAD25E18DEE0040C675 /* ViewController.swift */; };
+		66479CAE25E18DEE0040C675 /* firstScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66479CAD25E18DEE0040C675 /* firstScreenViewController.swift */; };
 		66479CB125E18DEE0040C675 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66479CAF25E18DEE0040C675 /* Main.storyboard */; };
 		66479CB325E18DEF0040C675 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66479CB225E18DEF0040C675 /* Assets.xcassets */; };
 		66479CB625E18DEF0040C675 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66479CB425E18DEF0040C675 /* LaunchScreen.storyboard */; };
 		66479CC125E18DF00040C675 /* FlashcardsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66479CC025E18DF00040C675 /* FlashcardsTests.swift */; };
 		66479CCC25E18DF00040C675 /* FlashcardsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66479CCB25E18DF00040C675 /* FlashcardsUITests.swift */; };
+		6669708125F6BC59002B529D /* CreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6669708025F6BC59002B529D /* CreationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +39,7 @@
 		66479CA625E18DEE0040C675 /* Flashcards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flashcards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66479CA925E18DEE0040C675 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66479CAB25E18DEE0040C675 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		66479CAD25E18DEE0040C675 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		66479CAD25E18DEE0040C675 /* firstScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstScreenViewController.swift; sourceTree = "<group>"; };
 		66479CB025E18DEE0040C675 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		66479CB225E18DEF0040C675 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66479CB525E18DEF0040C675 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +50,7 @@
 		66479CC725E18DF00040C675 /* FlashcardsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlashcardsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		66479CCB25E18DF00040C675 /* FlashcardsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardsUITests.swift; sourceTree = "<group>"; };
 		66479CCD25E18DF00040C675 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6669708025F6BC59002B529D /* CreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +101,9 @@
 		66479CA825E18DEE0040C675 /* Flashcards */ = {
 			isa = PBXGroup;
 			children = (
-				66479CA925E18DEE0040C675 /* AppDelegate.swift */,
-				66479CAB25E18DEE0040C675 /* SceneDelegate.swift */,
-				66479CAD25E18DEE0040C675 /* ViewController.swift */,
-				66479CAF25E18DEE0040C675 /* Main.storyboard */,
-				66479CB225E18DEF0040C675 /* Assets.xcassets */,
-				66479CB425E18DEF0040C675 /* LaunchScreen.storyboard */,
+				6669706025F6AE3C002B529D /* Misc */,
+				6669706725F6AE7F002B529D /* ViewControllers */,
+				6669707125F6B140002B529D /* Storyboards */,
 				66479CB725E18DEF0040C675 /* Info.plist */,
 			);
 			path = Flashcards;
@@ -126,6 +125,34 @@
 				66479CCD25E18DF00040C675 /* Info.plist */,
 			);
 			path = FlashcardsUITests;
+			sourceTree = "<group>";
+		};
+		6669706025F6AE3C002B529D /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				66479CA925E18DEE0040C675 /* AppDelegate.swift */,
+				66479CAB25E18DEE0040C675 /* SceneDelegate.swift */,
+				66479CB225E18DEF0040C675 /* Assets.xcassets */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
+		6669706725F6AE7F002B529D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				66479CAD25E18DEE0040C675 /* firstScreenViewController.swift */,
+				6669708025F6BC59002B529D /* CreationViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		6669707125F6B140002B529D /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				66479CAF25E18DEE0040C675 /* Main.storyboard */,
+				66479CB425E18DEF0040C675 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +285,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66479CAE25E18DEE0040C675 /* ViewController.swift in Sources */,
+				66479CAE25E18DEE0040C675 /* firstScreenViewController.swift in Sources */,
 				66479CAA25E18DEE0040C675 /* AppDelegate.swift in Sources */,
 				66479CAC25E18DEE0040C675 /* SceneDelegate.swift in Sources */,
+				6669708125F6BC59002B529D /* CreationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

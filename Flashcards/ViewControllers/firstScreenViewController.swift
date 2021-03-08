@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class firstScreenViewController: UIViewController {
     
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var answerLabel: UILabel!
@@ -70,6 +70,19 @@ class ViewController: UIViewController {
     
     @IBAction func didTapAns3(_ sender: Any) {
         answer3.isHidden = true
+    }
+    
+    func updateFlashcard(question: String, answer: String){
+        questionLabel.text = question
+        answerLabel.text = answer
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let navigationController = segue.destination as! UINavigationController
+        
+        let creationController = navigationController.topViewController as! CreationViewController
+        
+        creationController.flashcardsController = self
     }
 }
 
