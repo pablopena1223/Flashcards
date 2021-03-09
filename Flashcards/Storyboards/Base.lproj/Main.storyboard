@@ -40,6 +40,18 @@
                                     <action selector="didTapAns2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4ME-q9-Vbf"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="rp2-hv-ZNo" userLabel="answer3">
+                                <rect key="frame" x="122" y="651" width="170" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.35686274509999999" green="0.51764705879999995" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Sao Paulo">
+                                    <color key="titleColor" red="0.98823529409999999" green="0.46274509800000002" blue="0.41568627450000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapAns3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wQb-nP-kHA"/>
+                                </connections>
+                            </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1F2-iz-LhD">
                                 <rect key="frame" x="25" y="171" width="364" height="213"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -62,22 +74,21 @@
                                         <color key="textColor" red="0.35686274509999999" green="0.51764705879999995" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IYQ-Er-OSS">
+                                        <rect key="frame" x="326" y="175" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="✏️"/>
+                                        <connections>
+                                            <segue destination="YIE-1Z-4zG" kind="presentation" identifier="EditSegue" id="G9J-8n-wae"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <gestureRecognizers/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="rp2-hv-ZNo" userLabel="answer3">
-                                <rect key="frame" x="122" y="651" width="170" height="76"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.35686274509999999" green="0.51764705879999995" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Sao Paulo">
-                                    <color key="titleColor" red="0.98823529409999999" green="0.46274509800000002" blue="0.41568627450000001" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
                                 <connections>
-                                    <action selector="didTapAns3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wQb-nP-kHA"/>
+                                    <outletCollection property="gestureRecognizers" destination="Ox2-yP-OnA" appends="YES" id="TKi-WJ-0tM"/>
                                 </connections>
-                            </button>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4zC-Ox-sRv">
                                 <rect key="frame" x="149" y="776" width="116" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -102,6 +113,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer enabled="NO" id="Ox2-yP-OnA">
+                    <connections>
+                        <action selector="didTapOnFlashcard:" destination="BYZ-38-t0r" id="QJ5-cb-j04"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="48.883928571428569"/>
         </scene>
@@ -119,8 +135,20 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Extra answer #1" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Rp-40-s5y">
+                                <rect key="frame" x="20" y="305" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Extra answer #2" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qLH-Ve-owS">
+                                <rect key="frame" x="20" y="365" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Answer" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dka-vT-1v7">
-                                <rect key="frame" x="20" y="246" width="374" height="34"/>
+                                <rect key="frame" x="20" y="245" width="374" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -143,6 +171,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="answerTextField" destination="Dka-vT-1v7" id="xON-hK-zPj"/>
+                        <outlet property="extraAnswerOneTextField" destination="8Rp-40-s5y" id="1X0-32-9ux"/>
+                        <outlet property="extraAnswerTwoTextField" destination="qLH-Ve-owS" id="TZC-PL-rjt"/>
                         <outlet property="questionTextField" destination="V0j-DT-6DY" id="mHD-e3-Hus"/>
                     </connections>
                 </viewController>
@@ -155,6 +185,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YIE-1Z-4zG" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="S4d-eI-jsa"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Hb7-Fo-C9m">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -169,6 +200,9 @@
             <point key="canvasLocation" x="1095.6521739130435" y="48.883928571428569"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="G9J-8n-wae"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

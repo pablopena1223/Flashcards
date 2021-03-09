@@ -46,15 +46,15 @@ class firstScreenViewController: UIViewController {
     }
     
  
-// Part of the required steps, deleted the Tap Gesture. If you want to see it work, attatch the Tap Gesture to the view w the flash cards
-//    @IBAction func tapOnFlashcard(_ sender: Any) {
-//        if questionLabel.isHidden == false {
-//            questionLabel.isHidden = true
-//        }
-//        else{
-//            questionLabel.isHidden = false
-//        }
-//    }
+// Part of the required steps, deleted the Tap Gesture. If you want to see it work, attatch the Tap Gesture to the view w the flash cards and connect to this IBAction. (un)Click enable under the "brains" in the tapGesture 
+    @IBAction func didTapOnFlashcard(_ sender: Any) {
+        if questionLabel.isHidden == false {
+            questionLabel.isHidden = true
+        }
+        else{
+            questionLabel.isHidden = false
+        }
+    }
     
     
     @IBAction func didTapAns1(_ sender: Any) {
@@ -72,9 +72,13 @@ class firstScreenViewController: UIViewController {
         answer3.isHidden = true
     }
     
-    func updateFlashcard(question: String, answer: String){
+    func updateFlashcard(question: String, answer: String, extraAnswerOne: String?, extraAnswerTwo: String?){
         questionLabel.text = question
         answerLabel.text = answer
+        
+        answer1.setTitle(extraAnswerOne, for: .normal)
+        answer2.setTitle(answer, for: .normal)
+        answer3.setTitle(extraAnswerTwo, for: .normal)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -83,6 +87,14 @@ class firstScreenViewController: UIViewController {
         let creationController = navigationController.topViewController as! CreationViewController
         
         creationController.flashcardsController = self
+        
+        creationController.initialQuestion = questionLabel.text
+        creationController.initialAnswer = answerLabel.text
+        
+        if segue.identifier == "EditSegue" {
+            creationController.initialQuestion = questionLabel.text
+            creationController.initialAnswer = answerLabel.text
+        }
     }
 }
 
