@@ -29,6 +29,6 @@ This app will ask a question in the form of a flashcard and three options. Once 
 - [x] Build in logic to show the answer side when the card is tapped
 - [x] Push code to GitHub
 ## Optional
-- [x] Toggle the flashcard between the question side and the answer side
+- [] Toggle the flashcard between the question side and the answer side
 - [x] Style the question and answer side of the card to better distinguish between the two sides
 - [x] Add selectable multiple choice answers beneath the card
