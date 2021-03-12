@@ -6,6 +6,7 @@
 This app will ask a question in the form of a flashcard and three options. Once you tap on the correct answer, all options will disapear and show the other side of the flash card
 
 ### App Walk-though
+![](https://i.imgur.com/BpYkLTz.gif)
 
 ## Required
 - [x] User can open the creation screen
@@ -13,9 +14,9 @@ This app will ask a question in the form of a flashcard and three options. Once 
 - [x] User can enter a new question and answer in the creation screen to then show it on the flashcard
 - [x] Push code to GitHub
 ## Optional
-- [ ] User gets an error if they try to create a new flashcard with no question or answer
-- [ ] User can edit existing flashcard
-- [ ] User can add multiple choice answers in the creation screen
+- [x] User gets an error if they try to create a new flashcard with no question or answer
+- [x] User can edit existing flashcard
+- [x] User can add multiple choice answers in the creation screen
 
 ## Lab 1
 
