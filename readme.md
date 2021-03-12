@@ -3,7 +3,8 @@
 ## Lab 2
 
 ### App Description
-This app will ask a question in the form of a flashcard and three options. Once you tap on the correct answer, all options will disapear and show the other side of the flash card
+This app will ask a question in the form of a flashcard and three options. Once you tap on the correct answer, all options will disapear and show the other side of the flash card. 
+User will have the chance to change the current flashcard or create a brand new one. 
 
 ### App Walk-though
 ![](https://i.imgur.com/BpYkLTz.gif)
