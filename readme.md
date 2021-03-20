@@ -1,10 +1,25 @@
 # Flashcards
 
-## Lab 2
+## Lab 3
 
 ### App Description
-This app will ask a question in the form of a flashcard and three options. Once you tap on the correct answer, all options will disapear and show the other side of the flash card. 
-User will have the chance to change the current flashcard or create a brand new one. 
+This app will ask a question in the form of a flashcard and three options. Once you tap on the correct answer, all options will disapear and show the other side of the flash card. If only one answer is inputed, toggle option is used. 
+User will have the chance to change the current flashcard or create a brand new one.
+User's data will be saved and can change flashcards if needed. 
+
+### App Walk-though
+![](https://i.imgur.com/YpH31ld.gif)
+
+## Required
+- [x] User can browse through multiple flashcards
+- [x] User can re-open the app and see previously created flashcards
+- [x] Push code to GitHub
+## Optional
+- [ ] User can delete a flashcard
+- [ ] User can edit existing flashcard
+- [ ] User can store multiple choice questions
+
+## Lab 2
 
 ### App Walk-though
 ![](https://i.imgur.com/BpYkLTz.gif)
@@ -31,6 +46,6 @@ User will have the chance to change the current flashcard or create a brand new 
 - [x] Build in logic to show the answer side when the card is tapped
 - [x] Push code to GitHub
 ## Optional
-- [] Toggle the flashcard between the question side and the answer side
+- [x] Toggle the flashcard between the question side and the answer side
 - [x] Style the question and answer side of the card to better distinguish between the two sides
 - [x] Add selectable multiple choice answers beneath the card

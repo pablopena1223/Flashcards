@@ -86,16 +86,34 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="Ox2-yP-OnA" appends="YES" id="TKi-WJ-0tM"/>
+                                    <outletCollection property="gestureRecognizers" destination="amI-Ct-poW" appends="YES" id="nam-iX-Mw0"/>
                                 </connections>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4zC-Ox-sRv">
                                 <rect key="frame" x="149" y="776" width="116" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="93"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
                                 <state key="normal" title="+"/>
                                 <connections>
                                     <segue destination="YIE-1Z-4zG" kind="presentation" id="ANl-xw-4FJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CDP-WM-6G5">
+                                <rect key="frame" x="20" y="794" width="58" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Prev"/>
+                                <connections>
+                                    <action selector="didTapOnPrev:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7j8-Kw-rrO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JV0-6W-wLY">
+                                <rect key="frame" x="331" y="794" width="58" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="didTapOnNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9mg-fU-J0H"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -109,13 +127,15 @@
                         <outlet property="answer3" destination="rp2-hv-ZNo" id="Zbl-JC-3fH"/>
                         <outlet property="answerLabel" destination="OeB-XF-jRf" id="gI8-ED-Bpx"/>
                         <outlet property="cards" destination="1F2-iz-LhD" id="EoQ-fc-7EQ"/>
+                        <outlet property="nextButton" destination="JV0-6W-wLY" id="W0l-50-WOa"/>
+                        <outlet property="prevButton" destination="CDP-WM-6G5" id="xzL-HY-fbW"/>
                         <outlet property="questionLabel" destination="Inc-LM-9v6" id="2gw-9f-qiJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer enabled="NO" id="Ox2-yP-OnA">
+                <tapGestureRecognizer id="amI-Ct-poW">
                     <connections>
-                        <action selector="didTapOnFlashcard:" destination="BYZ-38-t0r" id="QJ5-cb-j04"/>
+                        <action selector="didTapOnFlashcard:" destination="BYZ-38-t0r" id="wBM-AZ-Tv4"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -160,7 +180,7 @@
                     <navigationItem key="navigationItem" id="gRM-NJ-QWw">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="Sa1-Re-9NR">
                             <connections>
-                                <action selector="didTapOnCancel:" destination="MVi-hJ-kBj" id="02v-wR-QyR"/>
+                                <action selector="didTapOnCancel:" destination="MVi-hJ-kBj" id="FRg-cx-cVx"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Done" id="xGK-sk-FNl">
