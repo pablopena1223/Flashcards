@@ -8,7 +8,7 @@ User will have the chance to change the current flashcard or create a brand new 
 User's data will be saved and can change flashcards if needed. 
 
 ### App Walk-though
-![](https://i.imgur.com/YpH31ld.gif)
+![](https://i.imgur.com/RmUa9O8.gif)
 
 ## Required
 - [x] User can browse through multiple flashcards
