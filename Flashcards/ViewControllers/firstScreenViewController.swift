@@ -77,14 +77,19 @@ class firstScreenViewController: UIViewController {
     }
     
  
-// Part of the required steps. If you want to see it work, attatch the tapGesture to this IBAction. (un)Click enable under the "brains" in the tapGesture
+    func flipFlashcard() {
+        UIView.transition(with: cards, duration: 0.3, options: .transitionFlipFromRight, animations: {
+            if self.questionLabel.isHidden == false {
+                self.questionLabel.isHidden = true
+            }
+            else{
+                self.questionLabel.isHidden = false
+            }
+        })
+    }
+    
     @IBAction func didTapOnFlashcard(_ sender: Any) {
-        if questionLabel.isHidden == false {
-            questionLabel.isHidden = true
-        }
-        else{
-            questionLabel.isHidden = false
-        }
+        flipFlashcard()
     }
     
     // ans1 is incorrect, if tapped will disappear
@@ -97,12 +102,51 @@ class firstScreenViewController: UIViewController {
         answer1.isHidden = true
         answer2.isHidden = true
         answer3.isHidden = true
-        questionLabel.isHidden = true
+        flipFlashcard()
     }
     
     // ans3 is incorrect, if tapped will disappear
     @IBAction func didTapAns3(_ sender: Any) {
         answer3.isHidden = true
+    }
+    
+    func animateCardOut() {
+        UIView.animate(withDuration: 0.3, animations: {
+            self.cards.transform = CGAffineTransform.identity.translatedBy(x: -300.0, y: 0.0)
+        }, completion: { finished in
+            self.updateLabels()
+            self.animateCardIn()
+        })
+    }
+    
+    func animateCardIn() {
+        // start with card on the right side
+        cards.transform = CGAffineTransform.identity.translatedBy(x: 300.0, y: 0.0)
+        
+        // animate card going back to its original position
+        UIView.animate(withDuration: 0.3, animations: {
+            self.cards.transform = CGAffineTransform.identity
+        })
+    }
+    
+    func animateCardOut2() {
+        // start with card on the right side
+        cards.transform = CGAffineTransform.identity.translatedBy(x: -300.0, y: 0.0)
+        
+        // animate card going back to its original position
+        UIView.animate(withDuration: 0.3, animations: {
+            self.cards.transform = CGAffineTransform.identity
+        })
+    }
+    
+    func animateCardIn2() {
+        
+        UIView.animate(withDuration: 0.3, animations: {
+            self.cards.transform = CGAffineTransform.identity.translatedBy(x: 300.0, y: 0.0)
+        }, completion: { finished in
+            self.updateLabels()
+            self.animateCardOut2()
+        })
     }
     
     // Prev button
@@ -115,6 +159,9 @@ class firstScreenViewController: UIViewController {
         
         // update buttons
         updateNextPrevButtons()
+        
+        // show animation for the previous card
+        animateCardOut2()
     }
     
     // Next button
@@ -127,6 +174,9 @@ class firstScreenViewController: UIViewController {
         
         // update buttons
         updateNextPrevButtons()
+        
+        // show animation for the next card
+        animateCardOut()
     }
     
     func updateLabels() {
